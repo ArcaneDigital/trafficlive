@@ -1,0 +1,27 @@
+{
+  "name": "trafficlive",
+  "version": "0.0.2",
+  "description": "An API wrapper for TrafficLive",
+  "main": "index.js",
+  "homepage": "https://github.com/ArcaneDigital/trafficlive",
+  "keywords": [
+    "codeship"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arcanedigital/trafficlive.git"
+  },
+  "author": {
+    "name": "Arcane Digital"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "restler": "^3.4.0",
+    "underscore": "^1.8.3"
+  },
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/arcanedigital/trafficlive/issues"
+  },
+  "scripts": {}
+}
