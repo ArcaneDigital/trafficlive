@@ -12,7 +12,8 @@ var TrafficLive = require('trafficlive');
 
 var tl = new TrafficLive({
     email: 'YOUR_EMAIL_ADDRESS',
-    token : 'YOUR_API_TOKEN'
+    token : 'YOUR_API_TOKEN',
+    pageSize: 250 //max 500
 });
 //All Employees
 tl.employees.all(function(response){
@@ -35,4 +36,12 @@ tl.employees.one(12345,function(response){
 * `employees.all(callback)`
 * `employees.one(employeeId, callback)`
 
+### clients
+
+* `clients.all(callback)`
+
+### jobs
+
+* `jobs.all(callback)`
+* `jobs.one(jobId, callback)`
 
