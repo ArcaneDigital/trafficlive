@@ -72,7 +72,7 @@ Property refers to the property of the object in the list such as the jobNumber 
 
 ##### Example Filters
 
-```js
+```javascript
 //Find employee by username
 tl.employees.find('userName|EQ|"john.doe@example.com"', function(response){
    console.log(response);
@@ -85,3 +85,5 @@ tl.employees.find('filter=dateCreated|GT|"2015-01-01T00:00:00.000+0000"', functi
 
 //
 ```
+
+
