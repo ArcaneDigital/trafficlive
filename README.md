@@ -1,5 +1,5 @@
-# trafficlive 
-A wrapper for the TrafficLive API. 
+# trafficlive
+A wrapper for the TrafficLive API.
 
 ## Install via NPM!
 ```
@@ -13,7 +13,7 @@ var TrafficLive = require('trafficlive');
 var tl = new TrafficLive({
     email: 'YOUR_EMAIL_ADDRESS',
     token : 'YOUR_API_TOKEN',
-    pageSize: 250 //max 500w
+    pageSize: 250 //max 500
 });
 //All Employees
 tl.employees.all(function(response){
@@ -41,11 +41,14 @@ tl.employees.one(12345,function(response){
 
 * `clients.all(callback)`
 * `clients.one(clientId, callback)`
+* `clients.find(filter, callback)`
 
 ### jobs
 
 * `jobs.all(callback)`
 * `jobs.one(jobId, callback)`
+* `jobs.allDetails(callback)`
+* `jobs.oneDetail(jobId, callback)`
 
 
 ### Filtering
@@ -75,6 +78,11 @@ Property refers to the property of the object in the list such as the jobNumber 
 ```javascript
 //Find employee by username
 tl.employees.find('userName|EQ|"john.doe@example.com"', function(response){
+   console.log(response);
+});
+
+//Find client using partial name
+tl.clients.find('name|LIKE|"Acme%"', function(response){
    console.log(response);
 });
 
