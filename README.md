@@ -8,6 +8,7 @@ npm install trafficlive
 
 ## Example usage
 ```js
+'use strict'
 var TrafficLive = require('trafficlive');
 
 var tl = new TrafficLive({
@@ -16,11 +17,11 @@ var tl = new TrafficLive({
     pageSize: 250 //max 500
 });
 //All Employees
-tl.employees.all(function(response){
-    for(var i in response) {
-        console.log(response[i].id);
-    }
-});
+tl.employees.all(function(response) {
+  response.data.map(function(item) {
+    console.log(item)
+  })
+})
 
 //Single Employee
 tl.employees.one(12345,function(response){
@@ -43,12 +44,29 @@ tl.employees.one(12345,function(response){
 * `clients.one(clientId, callback)`
 * `clients.find(filter, callback)`
 
+### entries
+
+* `entries.all(callback)`
+* `entries.one(entryId, filter, callback)`
+* `entries.find(filter, callback)`
+
+
 ### jobs
 
 * `jobs.all(callback)`
 * `jobs.one(jobId, callback)`
 * `jobs.allDetails(callback)`
 * `jobs.oneDetail(jobId, callback)`
+
+### departments
+
+* `departments.all(callback)`
+* `departments.one(departmentId, callback)`
+
+### invoices
+
+* `invoices.all(callback)`
+* `invoices.one(invoiceId, callback)`
 
 
 ### Filtering
