@@ -1,12 +1,10 @@
 {
   "name": "trafficlive",
-  "version": "0.3.6",
+  "version": "1.0.0",
   "description": "An API wrapper for TrafficLive",
   "main": "index.js",
   "homepage": "https://github.com/ArcaneDigital/trafficlive",
-  "keywords": [
-    "codeship"
-  ],
+  "keywords": ["codeship"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/arcanedigital/trafficlive.git"
